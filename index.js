@@ -1,3 +1,5 @@
+'use strict';
+
 var express = require('express');
 var bodyParser = require('body-parser');
 var fs = require('fs');
@@ -61,7 +63,7 @@ app.get('/file', function (req, resp) {
     };
     var json = JSON.stringify(jsonObj);
     resp.end(json);
-})
+});
 
 var server = app.listen(8081, function () {
     var host = server.address().address;
